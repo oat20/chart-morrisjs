@@ -217,9 +217,9 @@ $(function() {
         xkey: 'device',
         ykeys: ['geekbench'],
         labels: ['Geekbench'],
-        barRatio: 0.4,
-        xLabelAngle: 35,
-        hideHover: 'auto',
+        //barRatio: 0.4,
+        //xLabelAngle: 35,
+        //hideHover: 'auto',
         resize: true
     });
 

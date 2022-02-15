@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorrisJS</title>
+    <link href="./morris.css" rel="stylehseet">
+</head>
+<body>
+    <div id="morris-area-chart"></div>
+    <div id="bar-example"></div>
+    
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./morris/raphael.min.js"></script>
+    <script src="./morris/morris.min.js"></script>
+    <script src="./morris/morris-data.js"></script>
+    <script>
+        $(function(){
+            Morris.Bar({
+                element: 'bar-example',
+                data: [{
+                    device: 'iPhone',
+                    geekbench: 136
+                }, {
+                    device: 'iPhone 3G',
+                    geekbench: 137
+                }, {
+                    device: 'iPhone 3GS',
+                    geekbench: 275
+                }, {
+                    device: 'iPhone 4',
+                    geekbench: 380
+                }, {
+                    device: 'iPhone 4S',
+                    geekbench: 655
+                }, {
+                    device: 'iPhone 5',
+                    geekbench: 1571
+                }],
+                xkey: 'device',
+                ykeys: ['geekbench'],
+                labels: ['Geekbench'],
+                resize: true
+            });
+        })
+    </script>
+</body>
+</html>

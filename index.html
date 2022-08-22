@@ -40,7 +40,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase">Donut chart</h5>
-                        <div id="morris-donut-chart"></div>
+                        <div id="morris-donut-chart2"></div>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
 
     </div>
     
-    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./bootstrap@4/js/bootstrap.bundle.min.js"></script>
     <script src="./morris/raphael.min.js"></script>
     <script src="./morris/morris.min.js"></script>
@@ -90,7 +90,7 @@
                 // the chart.
                 data: [{
                     d: '2012-10-01',
-                    visits: 802, b: 575
+                    visits: 802, "b": 575
                 }, {
                     d: '2012-10-02',
                     visits: 783, b: 675
@@ -192,6 +192,19 @@
                 // Disables line smoothing
                 smooth: false,
                 resize: true
+            });
+
+            $.ajax({
+                url: './morris/data.json',
+                type: 'GET',
+                dataType: 'json'
+            }).then(function(data){
+                console.log(data);
+                Morris.Donut({
+                    element: 'morris-donut-chart2',
+                    data: data,
+                    resize: true
+                });
             });
         });
     </script>

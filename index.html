@@ -9,7 +9,9 @@
     <link href="./morris.css" rel="stylehseet">
 </head>
 <body>
-    <div class="container-xl my-3">
+    <div class="container-fluid my-3">
+
+        <h1 class="mb-3">DASHBOARD</h1>
 
         <div class="card">
             <div class="card-body">
@@ -18,27 +20,32 @@
             </div>
         </div>
 
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title text-uppercase">bar chart</h5>
-                <div id="bar-example"></div>
+        <div class="card my-3">
+        <div class="card-body">
+            <h5 class="card-title text-uppercase">line chart</h5>
+            <div id="line-chart"></div>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-uppercase">bar chart</h5>
+                    <div id="bar-example"></div>
+                </div>
+            </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase">Donut chart</h5>
+                        <div id="morris-donut-chart"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title text-uppercase">line chart</h5>
-                <div id="line-chart"></div>
-            </div>
-        </div>
-
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title text-uppercase">Donut chart</h5>
-                <div id="morris-donut-chart"></div>
-            </div>
-        </div>
-    
     </div>
     
     <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -83,105 +90,105 @@
                 // the chart.
                 data: [{
                     d: '2012-10-01',
-                    visits: 802
+                    visits: 802, b: 575
                 }, {
                     d: '2012-10-02',
-                    visits: 783
+                    visits: 783, b: 675
                 }, {
                     d: '2012-10-03',
-                    visits: 820
+                    visits: 820, b: 789
                 }, {
                     d: '2012-10-04',
-                    visits: 839
+                    visits: 839, b: 875
                 }, {
                     d: '2012-10-05',
-                    visits: 792
+                    visits: 792, b: 965
                 }, {
                     d: '2012-10-06',
-                    visits: 859
+                    visits: 859, b: 1089
                 }, {
                     d: '2012-10-07',
-                    visits: 790
+                    visits: 790, b: 1175
                 }, {
                     d: '2012-10-08',
-                    visits: 1680
+                    visits: 1680, b: 1189
                 }, {
                     d: '2012-10-09',
-                    visits: 1592
+                    visits: 1592, b: 1289
                 }, {
                     d: '2012-10-10',
-                    visits: 1420
+                    visits: 1420, b: 1375
                 }, {
                     d: '2012-10-11',
-                    visits: 882
+                    visits: 882, b: 1465
                 }, {
                     d: '2012-10-12',
-                    visits: 889
+                    visits: 889, b: 1589
                 }, {
                     d: '2012-10-13',
-                    visits: 819
+                    visits: 819, b: 1675
                 }, {
                     d: '2012-10-14',
-                    visits: 849
+                    visits: 849, b: 1789
                 }, {
                     d: '2012-10-15',
-                    visits: 870
+                    visits: 870, b: 1875
                 }, {
                     d: '2012-10-16',
-                    visits: 1063
+                    visits: 1063, b: 1789
                 }, {
                     d: '2012-10-17',
-                    visits: 1192
+                    visits: 1192, b: 1975
                 }, {
                     d: '2012-10-18',
-                    visits: 1224
+                    visits: 1224, b: 2089
                 }, {
                     d: '2012-10-19',
-                    visits: 1329
+                    visits: 1329, b: 2175
                 }, {
                     d: '2012-10-20',
-                    visits: 1329
+                    visits: 1329, b: 2289
                 }, {
                     d: '2012-10-21',
-                    visits: 1239
+                    visits: 1239, b: 2375
                 }, {
                     d: '2012-10-22',
-                    visits: 1190
+                    visits: 1190, b: 2465
                 }, {
                     d: '2012-10-23',
-                    visits: 1312
+                    visits: 1312, b: 2589
                 }, {
                     d: '2012-10-24',
-                    visits: 1293
+                    visits: 1293, b: 2675
                 }, {
                     d: '2012-10-25',
-                    visits: 1283
+                    visits: 1283, b: 2789
                 }, {
                     d: '2012-10-26',
-                    visits: 1248
+                    visits: 1248, b: 2875
                 }, {
                     d: '2012-10-27',
-                    visits: 1323
+                    visits: 1323, b: 2989
                 }, {
                     d: '2012-10-28',
-                    visits: 1390
+                    visits: 1390, b: 3075
                 }, {
                     d: '2012-10-29',
-                    visits: 1420
+                    visits: 1420, b: 3189
                 }, {
                     d: '2012-10-30',
-                    visits: 1529
+                    visits: 1529, b: 3275
                 }, {
                     d: '2012-10-31',
-                    visits: 1892
+                    visits: 1892, b: 3389
                 },],
                 // The name of the data record attribute that contains x-visitss.
                 xkey: 'd',
                 // A list of names of data record attributes that contain y-visitss.
-                ykeys: ['visits'],
+                ykeys: ['visits', 'b'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels: ['Visits'],
+                labels: ['VISITS A', 'VISITS B'],
                 // Disables line smoothing
                 smooth: false,
                 resize: true

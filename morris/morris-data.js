@@ -1,5 +1,4 @@
 // Morris.js Charts sample data for SB Admin template
-
 $(function() {
 
     // Area Chart
@@ -61,7 +60,8 @@ $(function() {
         labels: ['iPhone', 'iPad', 'iPod Touch'],
         pointSize: 2,
         hideHover: 'auto',
-        resize: true
+        resize: true,
+        lineColors: ['#F39566', '#ECC0AA', '#E88E61']
     });
 
     // Donut Chart
@@ -189,7 +189,8 @@ $(function() {
         labels: ['Visits'],
         // Disables line smoothing
         smooth: false,
-        resize: true
+        resize: true,
+        lineColors: ['#F39566']
     });
 
     // Bar Chart
@@ -222,6 +223,5 @@ $(function() {
         hideHover: 'auto',
         resize: true
     });
-
 
 });
